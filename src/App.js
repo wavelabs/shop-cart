@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import './App.css';
 import Header from './components/header/Header';
 import ProductView from './components/product_view/ProductView';
+import Footer from './components/footer/Footer';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
         <Header/>
         <ProductView/>
+        <Footer />
       </div>
     );
   }
