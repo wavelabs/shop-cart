@@ -24,7 +24,7 @@ class ShoppingCart extends React.Component {
         <Col md={12}>
           <div className="shopping-cart">
             <h4>Tus futuros autos!</h4>
-            { this.renderItemsCart(this.props.shopping_cart) }
+            { this.renderItemsCart(this.props.cart) }
           </div>
         </Col>
       </Row>
