@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {Row, Col} from 'react-bootstrap';
 import './ShoppingCart.css'
 
@@ -32,4 +33,8 @@ class ShoppingCart extends React.Component {
   }
 }
 
-export default ShoppingCart
+const mapStateToProps = (state) => ({
+  cart: state.cart
+})
+
+export default connect(mapStateToProps)(ShoppingCart)

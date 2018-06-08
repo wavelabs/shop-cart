@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import {Col, Button} from 'react-bootstrap';
 
 class ProductItem extends React.Component {
@@ -10,7 +11,7 @@ class ProductItem extends React.Component {
             <img src={this.props.product.img} alt={this.props.product.name}/>
           </figure>
           <p>{this.props.product.name}</p>
-          <Button onClick={() => this.props.addToCart(this.props.product)}>
+          <Button onClick={ () => this.props.addToCart(this.props.product)}>
             Agregar
           </Button>
         </div>
@@ -19,4 +20,13 @@ class ProductItem extends React.Component {
   }
 }
 
-export default ProductItem
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart (product) {
+      let action = {type: 'ADD_TO_CART', product: product}
+      dispatch(action)
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(ProductItem)
