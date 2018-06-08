@@ -6,9 +6,9 @@ import ProductItem from './ProductItem'
 class ProductList extends React.Component {
   state = {
     products: [
-      {id: 1, name: "Auto lujoso", img: "https://loremflickr.com/320/240/racecar?random=1"},
-      {id: 2, name: "Auto lujoso 2", img: "https://loremflickr.com/320/240/racecar?random=2"},
-      {id: 3, name: "Auto lujoso 3", img: "https://loremflickr.com/320/240/racecar?random=3"}
+      {id: 1, name: "Auto lujoso", img: "/images/auto-1.jpg"},
+      {id: 2, name: "Auto lujoso 2", img: "/images/auto-2.jpg"},
+      {id: 3, name: "Auto lujoso 3", img: "/images/auto-3.jpg"}
     ]
   }
 
